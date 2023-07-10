@@ -51,6 +51,9 @@ export default function AuthProvider({children}) {
                 case "auth/invalid-email":
                     throw new Error("Formato de email inválido!")
                     break
+                default:
+                    throw new Error("Usuário já existente")
+                    break
             }
         })
 
